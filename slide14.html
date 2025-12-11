@@ -1,12 +1,242 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 14</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Mantenha Dispositivos Atualizados</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 20px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    /* Estilo dos Cards de Passo */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 30px;
+      flex: 1;
+    }
+
+    .step-card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 20px;
+      padding-top: 35px;
+      /* Espaço para o número */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+      border-color: #cbd5e1;
+      background-color: #ffffff;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 36px;
+      background-color: #003366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 16px;
+      border: 4px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .step-icon {
+      font-size: 32px;
+      color: #00aaff;
+      margin-bottom: 15px;
+      background-color: #e0f2fe;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .step-title {
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .step-desc {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* Caixa de Alerta Inferior */
+    .alert-box {
+      background-color: #fffbeb;
+      /* Amarelo bem claro */
+      border-left: 6px solid #f59e0b;
+      /* Amarelo escuro */
+      padding: 15px 25px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .alert-icon {
+      color: #f59e0b;
+      font-size: 24px;
+      margin-right: 20px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 14</h1>
-  <p>Conteúdo do slide 14</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-2">Mantenha Dispositivos Atualizados</h2>
+        <p class="text-xl text-gray-500 font-light">Dispositivos desatualizados são alvos fáceis para invasões.
+          Proteja-se em 4 etapas.</p>
+      </div>
+      <!-- Grid de Passos -->
+      <div class="steps-grid">
+        <!-- Passo 1 -->
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <i class="fas fa-sync"></i>
+          </div>
+          <h3 class="step-title">Ative Automático</h3>
+          <p class="step-desc">
+            Acesse as configurações do sistema operacional e habilite a opção de "Atualização Automática". Faça o mesmo
+            nas lojas de aplicativos (Play Store/App Store).
+          </p>
+        </div>
+        <!-- Passo 2 -->
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <i class="fas fa-bug-slash"></i>
+          </div>
+          <h3 class="step-title">Aplique Correções</h3>
+          <p class="step-desc">
+            Não ignore notificações de atualização. Elas frequentemente contêm "patches" que corrigem brechas de
+            segurança recém-descobertas por hackers.
+          </p>
+        </div>
+        <!-- Passo 3 -->
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <i class="fas fa-power-off"></i>
+          </div>
+          <h3 class="step-title">Reinicie o Aparelho</h3>
+          <p class="step-desc">
+            Muitas atualizações críticas só são instaladas efetivamente após o sistema reiniciar. Se solicitado, faça
+            isso o quanto antes, não adie indefinidamente.
+          </p>
+        </div>
+        <!-- Passo 4 -->
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon">
+            <i class="fas fa-ban"></i>
+          </div>
+          <h3 class="step-title">Evite Obsoletos</h3>
+          <p class="step-desc">
+            Aparelhos muito antigos deixam de receber suporte do fabricante. Sem correções de segurança, eles se tornam
+            vulneráveis e arriscados para uso.
+          </p>
+        </div>
+      </div>
+      <!-- Alerta Final -->
+      <div class="alert-box">
+        <div class="alert-icon">
+          <i class="fas fa-triangle-exclamation"></i>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-gray-800 mb-1">Atenção aos Aplicativos</h4>
+          <p class="text-gray-700 text-sm">
+            Além do sistema (Android/iOS/Windows), lembre-se de manter navegadores, plugins e antivírus sempre
+            atualizados. Eles são a primeira barreira contra ameaças da web.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

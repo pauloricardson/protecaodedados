@@ -1,12 +1,272 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 29</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Checklist Final de Proteção</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 40px 80px;
+      /* Adjusted padding to fit content */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 25px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 15px;
+      flex-shrink: 0;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    /* Checklist Grid Styles */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex: 1;
+      align-content: start;
+      overflow-y: auto;
+      /* Safety for small overflow */
+    }
+
+    .checklist-card {
+      background-color: #f8fafc;
+      border-left: 5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 15px 20px;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .checklist-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .checklist-card.priority {
+      border-left-color: #ef4444;
+      /* Vermelho para alta prioridade */
+      background-color: #fff1f2;
+    }
+
+    .checklist-card.active {
+      border-left-color: #00aaff;
+      /* Azul para ação padrão */
+      background-color: #f0f9ff;
+    }
+
+    .check-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 2px solid #cbd5e1;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .checklist-card.priority .check-circle {
+      border-color: #ef4444;
+      color: #ef4444;
+      background-color: #fff;
+    }
+
+    .checklist-card.active .check-circle {
+      border-color: #00aaff;
+      color: #00aaff;
+      background-color: #fff;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #64748b;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    /* Footer Tip */
+    .tip-box {
+      margin-top: 20px;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      color: #1e3a8a;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 29</h1>
-  <p>Conteúdo do slide 29</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-2">Checklist Final de Proteção</h2>
+        <p class="text-xl text-gray-500 font-light">Revise estes pontos essenciais para blindar sua privacidade e
+          segurança digital.</p>
+      </div>
+      <!-- Grid de Checklist -->
+      <div class="checklist-grid">
+        <!-- Item 1 -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-eye-slash"></i>
+          </div>
+          <div class="card-content">
+            <h3>Menos Exposição Online</h3>
+            <p>Reduza dados públicos em redes sociais. Pense duas vezes antes de postar localização ou rotinas e
+              preencha apenas o obrigatório em cadastros.</p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-filter"></i>
+          </div>
+          <div class="card-content">
+            <h3>Permissões Mínimas</h3>
+            <p>Revise periodicamente o acesso de apps a câmera, microfone e contatos. Remova permissões de aplicativos
+              que você não usa mais.</p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-key"></i>
+          </div>
+          <div class="card-content">
+            <h3>Autenticação Forte (2FA)</h3>
+            <p>Ative a verificação em duas etapas em todas as contas possíveis e use senhas longas e únicas gerenciadas
+              por um cofre de senhas.</p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>Dispositivos Atualizados</h3>
+            <p>Mantenha sistema operacional e aplicativos com atualização automática ativada para corrigir
+              vulnerabilidades de segurança rapidamente.</p>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>Backups Regulares</h3>
+            <p>Mantenha cópias de segurança automáticas e criptografadas. Teste a restauração periodicamente para
+              garantir a integridade dos dados.</p>
+          </div>
+        </div>
+        <!-- Item 6 -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="card-content">
+            <h3>Criptografia Ativa</h3>
+            <p>Use criptografia de disco em seus dispositivos e proteja arquivos sensíveis antes de enviá-los para a
+              nuvem.</p>
+          </div>
+        </div>
+        <!-- Item 7 -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <div class="card-content">
+            <h3>Direitos LGPD</h3>
+            <p>Exerça seus direitos: solicite acesso aos seus dados, peça correções e questione a finalidade do
+              tratamento de informações.</p>
+          </div>
+        </div>
+        <!-- Placeholder para equilíbrio visual (opcional/vazio ou dica extra) -->
+        <div class="checklist-card active" style="opacity: 0.7;">
+          <div class="check-circle">
+            <i class="fas fa-trash-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>Descarte Seguro</h3>
+            <p>Lembre-se de realizar a restauração de fábrica completa (wipe) antes de vender, doar ou descartar
+              qualquer dispositivo eletrônico.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Dica de Rodapé -->
+      <div class="tip-box">
+        <i class="fas fa-shield-halved text-blue-600 text-xl mr-3"></i>
+        <p class="font-medium">Segurança é um processo contínuo. Revise este checklist a cada 6 meses ou ao adquirir um
+          novo dispositivo.</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

@@ -1,12 +1,237 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 9</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Códigos QR e golpes digitais</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 70px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 15px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .columns-container {
+      display: flex;
+      flex: 1;
+      gap: 40px;
+      height: 100%;
+    }
+
+    .col-card {
+      flex: 1;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .col-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* "Protection" Column Styles (Green) */
+    .col-protect {
+      background-color: #f0fdf4;
+      /* Green-50 */
+      border: 1px solid #dcfce7;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    /* "Risk" Column Styles (Red) */
+    .col-risk {
+      background-color: #fef2f2;
+      /* Red-50 */
+      border: 1px solid #fee2e2;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .item-icon {
+      margin-top: 5px;
+      margin-right: 15px;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .footer-badges {
+      display: flex;
+      gap: 15px;
+      margin-top: auto;
+      padding-top: 20px;
+      opacity: 0.9;
+    }
+
+    .footer-badge {
+      height: 36px;
+      background-color: rgba(31, 41, 55, 0.1);
+      color: #374151;
+      border-radius: 8px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 9</h1>
-  <p>Conteúdo do slide 9</p>
+  <div class="slide-container shadow-2xl">
+    <div class="brand-stripe"></div>
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Códigos QR e golpes digitais</h2>
+        <p class="text-xl text-gray-500 font-light">A facilidade do "escanear e ir" pode esconder armadilhas perigosas
+          (Qrljacking). Fique atento.</p>
+      </div>
+      <!-- Columns -->
+      <div class="columns-container">
+        <!-- Column: Protection (Green) -->
+        <div class="col-card col-protect">
+          <div class="col-header text-green-800">
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 text-green-600">
+              <i class="fas fa-shield-halved text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Como se Proteger</h3>
+              <p class="text-sm opacity-75">Boas práticas de leitura</p>
+            </div>
+          </div>
+          <div class="item-list">
+            <div class="list-item text-green-900">
+              <i class="fas fa-magnifying-glass item-icon text-green-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Visualize a URL</p>
+                <p class="text-gray-600 leading-snug">Configure seu leitor de QR Code para exibir o link completo antes
+                  de abrir o navegador. Verifique se o endereço faz sentido.</p>
+              </div>
+            </div>
+            <div class="list-item text-green-900">
+              <i class="fas fa-hand-pointer item-icon text-green-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Sem Abertura Automática</p>
+                <p class="text-gray-600 leading-snug">Desative a opção de abrir sites automaticamente ao escanear.
+                  Mantenha o controle da ação final.</p>
+              </div>
+            </div>
+            <div class="list-item text-green-900">
+              <i class="fas fa-keyboard item-icon text-green-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Acesso Manual para Login</p>
+                <p class="text-gray-600 leading-snug">Se o código pedir login bancário ou senha, cancele. Digite o
+                  endereço oficial do banco ou serviço diretamente no navegador.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <div class="footer-badge">
+              <i class="fas fa-cog mr-2"></i> Configurações da Câmera
+            </div>
+          </div>
+        </div>
+        <!-- Column: Risks (Red) -->
+        <div class="col-card col-risk">
+          <div class="col-header text-red-800">
+            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4 text-red-600">
+              <i class="fas fa-triangle-exclamation text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Principais Riscos</h3>
+              <p class="text-sm opacity-75">Onde mora o perigo</p>
+            </div>
+          </div>
+          <div class="item-list">
+            <div class="list-item text-red-900">
+              <i class="fas fa-note-sticky item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Códigos Sobrepostos</p>
+                <p class="text-gray-600 leading-snug">Criminosos colam adesivos com códigos falsos por cima de QR Codes
+                  legítimos em cardápios, postes e bicicletas compartilhadas.</p>
+              </div>
+            </div>
+            <div class="list-item text-red-900">
+              <i class="fas fa-link item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Domínios Enganosos</p>
+                <p class="text-gray-600 leading-snug">Links falsos que imitam sites oficiais com pequenas alterações
+                  (ex: "paypa1.com"), levando a páginas de phishing.</p>
+              </div>
+            </div>
+            <div class="list-item text-red-900">
+              <i class="fas fa-file-arrow-down item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Download de Malware</p>
+                <p class="text-gray-600 leading-snug">O código pode iniciar o download de um arquivo malicioso (.apk,
+                  .exe) disfarçado de cupom ou fatura.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

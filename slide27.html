@@ -1,12 +1,235 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 27</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>LGPD - Termos: Agentes e ANPD</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 60px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      gap: 50px;
+      flex: 1;
+      align-items: flex-start;
+      overflow: hidden;
+      /* Prevent overflow if text is long */
+    }
+
+    .list-section {
+      flex: 1.4;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      background-color: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border-left: 4px solid #003366;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease;
+    }
+
+    .icon-wrapper {
+      width: 44px;
+      height: 44px;
+      background-color: #e0f2fe;
+      color: #0055aa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-right: 18px;
+      flex-shrink: 0;
+    }
+
+    .visual-section {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-top: 5px;
+    }
+
+    .visual-card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: 100%;
+      height: 460px;
+    }
+
+    .visual-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .stat-bubble {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 15px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      border-left: 4px solid #00aaff;
+      /* Blue accent */
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 27</h1>
-  <p>Conteúdo do slide 27</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-3">LGPD: Agentes e Autoridade</h2>
+        <p class="text-xl text-gray-600 font-light max-w-3xl">
+          Entenda quem são os responsáveis legais pelo tratamento dos seus dados e quem fiscaliza o cumprimento da lei.
+        </p>
+      </div>
+      <div class="content-wrapper">
+        <!-- Lista de Itens -->
+        <div class="list-section">
+          <!-- Item 1: Controlador -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-sitemap"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">Controlador</h3>
+              <p class="text-gray-600 text-base leading-snug">
+                É quem toma as decisões. Pessoa física ou jurídica que define <strong>como</strong> os dados serão
+                tratados e para <strong>quais</strong> finalidades.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2: Operador -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-gears"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">Operador</h3>
+              <p class="text-gray-600 text-base leading-snug">
+                É quem coloca a mão na massa. Realiza o tratamento dos dados em nome do Controlador, seguindo
+                estritamente suas instruções.
+              </p>
+            </div>
+          </div>
+          <!-- Item 3: Encarregado (DPO) -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">Encarregado (DPO)</h3>
+              <p class="text-gray-600 text-base leading-snug">
+                Atua como ponte de comunicação entre o Controlador, os titulares dos dados (você) e a Autoridade
+                Nacional (ANPD).
+              </p>
+            </div>
+          </div>
+          <!-- Item 4: ANPD -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-scale-balanced"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">ANPD</h3>
+              <p class="text-gray-600 text-base leading-snug">
+                A Autoridade Nacional de Proteção de Dados é o órgão federal que fiscaliza o cumprimento da lei e aplica
+                sanções em caso de infração.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Seção Visual -->
+        <div class="visual-section">
+          <div class="visual-card">
+            <img alt="Ambiente corporativo representando conformidade e governança de dados"
+              src="https://page.gensparksite.com/slides_images/0b53df94e41ae13e4ebe462c3b50e599.webp" />
+            <div class="stat-bubble">
+              <div class="flex items-center text-blue-600 mb-1">
+                <i class="fas fa-info-circle mr-2"></i>
+                <span class="font-bold text-sm uppercase tracking-wide">Conceito Importante</span>
+              </div>
+              <p class="text-sm text-gray-700 font-medium">
+                <strong>Agentes de Tratamento</strong> é o termo utilizado pela LGPD para se referir tanto ao
+                Controlador quanto ao Operador.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

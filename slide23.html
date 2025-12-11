@@ -1,12 +1,245 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 23</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Checklist - Vazamento de Dados</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 15px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    /* Checklist Grid Styles */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      flex: 1;
+      align-content: start;
+    }
+
+    .checklist-card {
+      background-color: #f8fafc;
+      border-left: 5px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .checklist-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .checklist-card.priority {
+      border-left-color: #ef4444;
+      /* Vermelho para alta prioridade */
+      background-color: #fff1f2;
+    }
+
+    .checklist-card.active {
+      border-left-color: #00aaff;
+      /* Azul para ação padrão */
+      background-color: #f0f9ff;
+    }
+
+    .check-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 2px solid #cbd5e1;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 18px;
+      flex-shrink: 0;
+      font-size: 16px;
+    }
+
+    .checklist-card.priority .check-circle {
+      border-color: #ef4444;
+      color: #ef4444;
+      background-color: #fff;
+    }
+
+    .checklist-card.active .check-circle {
+      border-color: #00aaff;
+      color: #00aaff;
+      background-color: #fff;
+    }
+
+    .card-content h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 6px;
+      margin-top: 0;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* Footer Tip */
+    .tip-box {
+      margin-top: auto;
+      background-color: #ecfdf5;
+      border: 1px solid #6ee7b7;
+      border-radius: 8px;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      color: #065f46;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 23</h1>
-  <p>Conteúdo do slide 23</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-2">Vazamento de dados: o que fazer?</h2>
+        <p class="text-xl text-gray-500 font-light">Identificou ou suspeita de um vazamento? Aja rápido com este plano
+          de resposta.</p>
+      </div>
+      <!-- Grid de Checklist -->
+      <div class="checklist-grid">
+        <!-- Item 1: Prioridade Máxima -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-key"></i>
+          </div>
+          <div class="card-content">
+            <h3>Troque as Senhas Imediatamente</h3>
+            <p>Altere a senha da conta afetada e de qualquer outro serviço onde você tenha reutilizado a mesma
+              combinação. Crie novas senhas fortes e únicas.</p>
+          </div>
+        </div>
+        <!-- Item 2: Prioridade Máxima -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="card-content">
+            <h3>Reforce a Autenticação (2FA)</h3>
+            <p>Se ainda não utilizava, ative a verificação em duas etapas. Se já usava, verifique se há dispositivos
+              desconhecidos conectados e desconecte-os.</p>
+          </div>
+        </div>
+        <!-- Item 3: Ação Padrão -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <div class="card-content">
+            <h3>Monitore Transações</h3>
+            <p>Verifique extratos bancários e histórico de compras. Ative notificações de movimentação financeira para
+              identificar fraudes em tempo real.</p>
+          </div>
+        </div>
+        <!-- Item 4: Ação Padrão -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-building"></i>
+          </div>
+          <div class="card-content">
+            <h3>Contate o Controlador</h3>
+            <p>Entre em contato com a empresa onde o vazamento ocorreu para obter informações oficiais sobre quais dados
+              foram expostos e quais medidas tomar.</p>
+          </div>
+        </div>
+        <!-- Item 5: Ação Padrão -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <div class="card-content">
+            <h3>Registre Ocorrência</h3>
+            <p>Se houver prejuízo financeiro ou uso indevido de documentos, registre um Boletim de Ocorrência (B.O.) na
+              delegacia especializada.</p>
+          </div>
+        </div>
+        <!-- Item 6: Ação Padrão -->
+        <div class="checklist-card active">
+          <div class="check-circle">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <div class="card-content">
+            <h3>Consulte a ANPD</h3>
+            <p>Verifique o portal da Autoridade Nacional de Proteção de Dados para entender seus direitos e, se
+              necessário, realizar uma denúncia formal.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Dica de Rodapé -->
+      <div class="tip-box">
+        <i class="fas fa-bell text-green-600 text-xl mr-3"></i>
+        <p class="font-medium">Dica Pro: Ferramentas como o "Have I Been Pwned" podem ajudar a verificar se seu e-mail
+          esteve envolvido em vazamentos conhecidos.</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
